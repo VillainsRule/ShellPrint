@@ -1,0 +1,21 @@
+{
+    "name": "shellprint",
+    "type": "module",
+    "scripts": {
+        "start": "node src/main.js",
+        "dev": "nodemon  --ext '.js' -w './src/**' src/main.js"
+    },
+    "dependencies": {
+        "axios": "^1.6.8",
+        "discord.js": "^14.14.1",
+        "express": "^4.19.2",
+        "firebase": "^10.10.0"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.0"
+    },
+    "imports": {
+        "#config": "./config.js",
+        "#generator/*": "./src/generator/*.js"
+    }
+}
