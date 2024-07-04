@@ -1,6 +1,7 @@
 {
     "name": "shellprint",
     "type": "module",
+    "main": "src/main.js",
     "scripts": {
         "start": "node src/main.js",
         "dev": "nodemon  --ext '.js' -w './src/**' src/main.js"

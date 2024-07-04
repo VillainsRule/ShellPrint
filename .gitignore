@@ -4,3 +4,7 @@ node_modules/
 
 # mac
 **/.DS_Store
+
+# data
+config.js
+data/

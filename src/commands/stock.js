@@ -51,7 +51,7 @@ export default async (message, args) => {
         message.guild.channels.cache.get(config.logChannel).send(`Generated **${generated.length}** accounts!`);
     };
 
-    if (args[0].toLowerCase() === 'check') {
+    if (args[0].toLowerCase() === 'check' || args[0].toLowerCase() === 'ls') {
         let accounts = JSON.parse(fs.readFileSync('./data/accounts.json'));
 
         message.delete();

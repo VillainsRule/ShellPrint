@@ -41,7 +41,7 @@ class Mail {
                 if (email.from !== 'noreply@shellshock.io') return setTimeout(async () => await check(), 1000);
 
                 let link = email.text.match(/http(.*?)en/)[0];
-                let oob = link.match(/oobCode=(.*?)&/)[1];
+                let oob = link.match(/oobCode=(.*?)&/)?.[1] || link.match(/oobCode=(.*?)/)?.[1];
 
                 let identity = await axios.post('https://www.googleapis.com/identitytoolkit/v3/relyingparty/setAccountInfo?key=AIzaSyDP4SIjKaw6A4c-zvfYxICpbEjn1rRnN50', { oobCode: oob }, {
                     headers: {

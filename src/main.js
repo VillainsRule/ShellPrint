@@ -1,8 +1,16 @@
 import express from 'express';
 import Discord from 'discord.js';
 import fs from 'fs';
+import path from 'path';
 import * as url from 'url';
 import config from '#config';
+
+const resolve = (p) => path.join(import.meta.dirname, p);
+const exists = (p) => fs.existsSync(p);
+
+if (!exists(resolve('../data/'))) fs.mkdirSync(resolve('../data/'));
+if (!exists(resolve('../data/accounts.json'))) fs.writeFileSync(resolve('../data/accounts.json'), '[]');
+if (!exists(resolve('../data/keys.json'))) fs.writeFileSync(resolve('../data/keys.json'), '{}');
 
 const app = express();
 
