@@ -1,0 +1,10 @@
+# node
+node_modules
+bun.lock
+
+# mac
+.DS_Store
+
+# data
+config.js
+data/
